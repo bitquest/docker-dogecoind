@@ -1,0 +1,7 @@
+dogecoin:
+    build: .
+    # volumes: 
+    #     - "./data:/root/.btcd"
+    ports:
+        - "44555:44555"
+        - "44556:44556"
