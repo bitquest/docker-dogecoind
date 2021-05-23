@@ -1,5 +1,6 @@
 dogecoin:
     build: .
+    command: dogecoind -printtoconsole -rpcuser=user -rpcpassword=hackme
     ports:
         - "44555:44555"
         - "44556:44556"
