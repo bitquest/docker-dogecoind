@@ -1,6 +1,8 @@
 dogecoin:
     build: .
-    command: dogecoind -printtoconsole -rpcuser=user -rpcpassword=hackme
+    command: -testnet -rpcuser=user -rpcpassword=hackme
+    volumes:
+        - "./data:/root/.dogecoin"
     ports:
         - "44555:44555"
         - "44556:44556"
