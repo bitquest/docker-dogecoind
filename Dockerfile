@@ -22,4 +22,5 @@ RUN ./autogen.sh
 RUN ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/"
 RUN make
 RUN make install
-ENTRYPOINT ["dogecoind","-printtoconsole"]
+ADD dogecoin.conf /dogecoin.conf
+ENTRYPOINT ["dogecoind","-printtoconsole","-conf=/dogecoin.conf"]
